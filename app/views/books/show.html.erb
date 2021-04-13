@@ -1,13 +1,15 @@
-<h1>New book      test</h1>
-<!-- form_with部分 -->
-<%= form_with model:@book_new, local:true do |f| %>
 
-  <h4>Title</h4>
-  <%= f.text_field :title %>
 
-  <h4>Body</h4>
-  <%= f.text_field :body %>
+<h2>Title</h2>
+<p><%= @book.title %></p>
+<h2>Body</h2>
+<p><%= @book.body %></p>
 
-  <%= f.submit 'Create Book' %>
-  
-<% end %>  
+
+<span>
+  <%= link_to "Edit",edit_book_path %>
+</span>
+
+<span>
+  <%= link_to "Back",books_path %>
+</span>
