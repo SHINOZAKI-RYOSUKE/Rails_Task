@@ -5,7 +5,15 @@
   <P>Body</P>
     <span><%= b.body %></span>
 
+<%= link_to "Show",book_path(b.id)%>
+
+<%= link_to "Destroy", book_path(b.id), method: :delete, "data-confirm" => "Are you sure?" %>
+
 <% end %>
+
+
+
+
 
 
 

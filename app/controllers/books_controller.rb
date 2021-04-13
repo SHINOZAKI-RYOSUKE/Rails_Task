@@ -7,10 +7,13 @@ class BooksController < ApplicationController
 
   def create
     book = Book.new(book_params)
-    book.save
-    redirect_to book_path(book.id)
+    if book.save
+      redirect_to book_path(book.id), notice:"Book was successfully created."
+    else 
+      notice:"Book was successfully updated."
+    end
   end
-  
+
   def update
     book = Book.find(params[:id])
     book.update(book_params)
@@ -25,7 +28,10 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
-  def destriy
+  def destroy
+    book = Book.find(params[:id])  # データ（レコード）を1件取得
+    book.destroy  # データ（レコード）を削除
+    redirect_to books_path  # 投稿一覧画面へリダイレクト
   end
 
 
