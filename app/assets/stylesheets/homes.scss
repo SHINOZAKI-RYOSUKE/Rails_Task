@@ -1,3 +1,25 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  display: block;
+  font-size: 2em;
+  mragin-block-start: 0.67em;
+  mragin-block-end: 0.67em;
+  mragin-inline-start: 0px;
+  mragin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.stlong {
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  mragin-block-start: 1em;
+  mragin-block-end: 1em;
+  mragin-inline-start: 0px;
+  mragin-inline-end: 0px;
+}
